@@ -23,3 +23,4 @@ check_sys(){
 }
 
 check_sys
+echo release
