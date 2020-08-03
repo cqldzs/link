@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env bash
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
@@ -24,13 +23,3 @@ check_sys(){
 }
 
 check_sys
-=======
-#!/bin/sh
-cd ~
-mkdir shell_tut
-cd shell_tut
-
-for ((i=0; i<10; i++)); do
-	touch test_$i.txt
-done
->>>>>>> 8285d9c48d4d6d514e440be66de83062b847ac68
