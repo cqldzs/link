@@ -51,22 +51,22 @@ Download_caddy(){
 	fi
 	
 	if [[ ${bit} == "x86_64" ]]; then
-		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=amd64"
+		wget --no-check-certificate -O "caddy" "https://caddyserver.com/api/download?os=linux&arch=amd64"
 	elif [[ ${bit} == "i386" || ${bit} == "i686" ]]; then
-		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=386"
+		wget --no-check-certificate -O "caddy" "https://caddyserver.com/api/download?os=linux&arch=386"
 	elif [[ ${bit} == "armv7l" ]]; then
-		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=arm7"
+		wget --no-check-certificate -O "caddy" "https://caddyserver.com/api/download?os=linux&arch=arm7"
 	else
 		echo -e "${Error_font_prefix}[错误]${Font_suffix} 不支持 [${bit}] ! 请向本站反馈[]中的名称，我会看看是否可以添加支持。" && exit 1
 	fi
-	[[ ! -e "caddy_linux.tar.gz" ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 下载失败 !" && exit 1
-	tar zxf "caddy_linux.tar.gz"
-	rm -rf "caddy_linux.tar.gz"
-	[[ ! -e ${caddy_file} ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 解压失败或压缩文件错误 !" && exit 1
-	rm -rf LICENSES.txt
-	rm -rf README.txt 
-	rm -rf CHANGES.txt
-	rm -rf "init/"
+	# [[ ! -e "caddy_linux.tar.gz" ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 下载失败 !" && exit 1
+	# tar zxf "caddy_linux.tar.gz"
+	# rm -rf "caddy_linux.tar.gz"
+	# [[ ! -e ${caddy_file} ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 解压失败或压缩文件错误 !" && exit 1
+	# rm -rf LICENSES.txt
+	# rm -rf README.txt 
+	# rm -rf CHANGES.txt
+	# rm -rf "init/"
 	chmod +x caddy
 }
 Service_caddy(){
